@@ -62,6 +62,7 @@ public class SpotifyController {
         return "Success";
     }
 
+    
     @PutMapping("/find-playlist")
     public String findPlaylist(String mobile, String playlistTitle) throws Exception{
         //Find the playlist with given title and add user as listener of that playlist and update user accordingly
