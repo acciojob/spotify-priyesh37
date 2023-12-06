@@ -11,13 +11,13 @@ public class SpotifyController {
     //Autowire will not work in this case, no need to change this and add autowire
     SpotifyService spotifyService = new SpotifyService();
 
+
     @PostMapping("/add-user")
     public String createUser(@RequestParam(name = "name") String name, String mobile){
         //create the user with given name and number
         User user= spotifyService.createUser(name,mobile);
         return "Success";
     }
-
     @PostMapping("/add-artist")
     public String createArtist(@RequestParam(name = "name") String name){
         //create the artist with given name
